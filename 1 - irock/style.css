@@ -1,11 +1,11 @@
 body {
   display: flex;
-  height: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-#rock {
-  height: 150px;
-  width: 150px;
-  background-color: chocolate;
-  margin: auto;
+#rock{
+  cursor: pointer;
 }
+
