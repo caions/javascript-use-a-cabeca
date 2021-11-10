@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  height: 100%;
+}
+
+#rock {
+  height: 150px;
+  width: 150px;
+  background-color: chocolate;
+  margin: auto;
+}

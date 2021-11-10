@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Duncan's Just-In-Time Donuts</title>
+  </head>
+  <body>
+    <div id="card">
+      <h1 id="card-title">Duncan's Just-In-Time Donuts</h1>
+      <h2 id="card-subtitle">All donuts 50 cents each, cake or glazed!</h2>
+      <div id="card-body">
+        <img id="clock-img" src="donuttime.png" alt="donutime" />
+        <form action="" id="form-container" onsubmit="placeOrder()">
+          <label for="name"
+            >Name:
+            <input type="text" name="Name" id="name" />
+          </label>
+          <label for="cakeDonuts"
+            ># cake of donuts:
+            <input
+              type="text"
+              name="cakeDonuts"
+              id="cakeDonuts"
+              onkeyup="updateOrder()"
+              onchange="updateOrder()"
+              
+            />
+          </label>
+          <label for="glazedDonuts"
+            ># of glazed donuts:
+            <input
+              type="text"
+              name="glazedDonuts"
+              id="glazedDonuts"
+              onkeyup="updateOrder()"
+              onchange="updateOrder()"
+              
+            />
+          </label>
+          <label for="minutes"
+            >Minutes 'til pickup:
+            <input type="text" name="minutes" id="minutes" />
+          </label>
+          <label for="subTotal"
+            >SubTotal:
+            <input type="text" name="subTotal" id="subTotal" disabled/>
+          </label>
+          <label for="tax"
+            >Tax:
+            <input type="text" name="tax" id="tax" disabled/>
+          </label>
+          <label for="total"
+            >Total:
+            <input type="text" name="total" id="total" disabled/>
+          </label>
+          <input type="submit" value="Place Order" />
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
