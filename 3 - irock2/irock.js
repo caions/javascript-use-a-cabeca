@@ -31,14 +31,14 @@ let userName;
 const touchRock = () => {
   if (userName == undefined || userName == "Enter your name here.") {
     userName = prompt("What is your name?", "Enter your name here.");
-    if(userName != "Enter your name here."){
+    if (userName != "Enter your name here.") {
       rock.src = "rock_happy.png";
       alert(`It is good to meet you, ${userName}`);
-      aloneRock()
+      aloneRock();
     }
-  }else{
-    alert(`Obrigado ${userName} eu gosto de atenção`)
+  } else {
+    alert(`Obrigado ${userName} eu gosto de atenção`);
     rock.src = "rock_happy.png";
-    aloneRock()
+    aloneRock();
   }
 };
