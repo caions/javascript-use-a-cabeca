@@ -5,6 +5,22 @@ const check = document.getElementById("check");
 
 const greetUser = () => alert("Hello, I am your pet rock.");
 
+const resizeRock = () => {
+  if (document.body.clientWidth < 222) {
+    rock.style.width = "100px";
+  } else {
+    rock.style.width = "227px";
+  }
+};
+// alternative resize with observer
+/* new ResizeObserver(() => {
+  if (body.clientWidth < 222) {
+    rock.style.width = "100px";
+  } else {
+    rock.style.width = "227px";
+  }
+}).observe(body); */
+
 const sadRock = () => {
   rock.src = "rock_sad.png";
 };
@@ -29,6 +45,7 @@ const aloneRock = () => {
 
 let userName;
 const touchRock = () => {
+  // TODO refactor conditional
   if (userName == undefined || userName == "Enter your name here.") {
     userName = prompt("What is your name?", "Enter your name here.");
     if (userName != "Enter your name here.") {
