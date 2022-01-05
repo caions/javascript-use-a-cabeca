@@ -26,12 +26,12 @@ const sadRock = () => {
 };
 
 const furiousRock = () => {
-  setInterval(() => {
+  /*   setInterval(() => {
     if (Math.floor(Math.random() * 1000) <= 50) {
       rock.src = "rock_furious.png";
       alert("Estou com raiva sem nenhum motivo");
     }
-  }, 10 * 1000);
+  }, 10 * 1000); */
 };
 
 const aloneRock = () => {
@@ -46,7 +46,13 @@ const writeCookie = (name) => {
   document.cookie = `username=${name}`;
 };
 
-let userName;
+const readCookie = () => {
+  const cookie = document.cookie;
+  const userNameCookie = cookie.slice(cookie.indexOf("=") + 1);
+  return userNameCookie;
+};
+
+let userName = readCookie() || undefined;
 const touchRock = () => {
   // TODO refactor conditional
   if (userName == undefined || userName == "Enter your name here.") {
