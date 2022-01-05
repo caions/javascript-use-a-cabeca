@@ -1,9 +1,7 @@
 const rock = document.getElementById("rock");
 const body = document.querySelector("body");
 const check = document.getElementById("check");
-// parei na linha 107
-
-const greetUser = () => alert("Hello, I am your pet rock.");
+// parei na linha 118
 
 const resizeRock = () => {
   if (document.body.clientWidth < 222) {
@@ -46,6 +44,7 @@ const writeCookie = (name) => {
   document.cookie = `username=${name}`;
 };
 
+// TODO fix read only username cookie, where has one or more cookies
 const readCookie = () => {
   const cookie = document.cookie;
   const userNameCookie = cookie.slice(cookie.indexOf("=") + 1);
@@ -53,6 +52,15 @@ const readCookie = () => {
 };
 
 let userName = readCookie() || undefined;
+
+const greetUser = () => {
+  if (userName) {
+    alert(`Hello,${userName} i miss you.`);
+  } else {
+    alert("Hello, I am your pet rock.");
+  }
+};
+
 const touchRock = () => {
   // TODO refactor conditional
   if (userName == undefined || userName == "Enter your name here.") {
