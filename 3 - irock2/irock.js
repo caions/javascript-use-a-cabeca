@@ -1,7 +1,9 @@
 const rock = document.getElementById("rock");
 const body = document.querySelector("body");
 const check = document.getElementById("check");
-// parei na linha 118
+const warning_message = document.getElementById('no-cookie')
+// parei na pagina 128
+const noCookieMessage = "Sorry cookies aren't suported / please enable in your browser."
 
 const resizeRock = () => {
   if (document.body.clientWidth < 222) {
@@ -54,6 +56,8 @@ const readCookie = () => {
 let userName = readCookie() || undefined;
 
 const greetUser = () => {
+  navigator.cookieEnabled || (warning_message.innerHTML = noCookieMessage)
+
   if (userName) {
     alert(`Hello,${userName} i miss you.`);
   } else {
@@ -68,7 +72,7 @@ const touchRock = () => {
     if (userName != "Enter your name here.") {
       rock.src = "rock_happy.png";
       alert(`It is good to meet you, ${userName}`);
-      writeCookie(userName);
+      navigator.cookieEnabled && writeCookie(userName);
       aloneRock();
     }
   } else {

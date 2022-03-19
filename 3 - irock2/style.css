@@ -3,9 +3,15 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 #rock{
   cursor: pointer;
+}
+
+#no-cookie{
+  margin-top: 50px;
+  font-size: 20px;
 }
 
